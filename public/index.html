@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <script>
+      // Tạo favicon với emoji
+      const faviconEmoji = "🚀"; // Emoji bạn muốn dùng
+      const canvas = document.createElement("canvas");
+      canvas.width = 32; // Kích thước chuẩn favicon
+      canvas.height = 32;
+      const context = canvas.getContext("2d");
+      context.font = "24px Arial, serif"; // Font phù hợp
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+      context.fillText(faviconEmoji, 16, 16); // Center text
+
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.type = "image/png";
+      link.href = canvas.toDataURL("image/png");
+      document.head.appendChild(link);
+    </script>
+    <title>Study React</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
