@@ -22,7 +22,7 @@ function UseStatePage() {
   const Button = ({
     label,
     onClick,
-    span = 1,
+    span = "",
     className = "",
     textColor = "",
   }) => {
@@ -50,7 +50,7 @@ function UseStatePage() {
         <Button label="+" onClick={() => handleCount("increase")} />
         {/* Nút Reset full 3 cột */}
         <Button
-          className="text-sm border-2 rounded-full text-white bg-black"
+          className="col-span-3 text-sm border-2 rounded-full text-white bg-black"
           label="Reset"
           onClick={() => handleCount("reset")}
           span={3}
